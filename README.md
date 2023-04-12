@@ -22,3 +22,5 @@
 ### 4. 결과
 
 ![Group 4903](https://user-images.githubusercontent.com/38881094/231370832-1c804e3e-a8b2-491c-b398-8891d12f2559.png)
+
+### 5. 프로젝트 기여도: 100%
