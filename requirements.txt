@@ -1,0 +1,7 @@
+pymysql
+pillow
+tensorflow
+matplotlib
+opencv-python
+konlpy
+schedule
