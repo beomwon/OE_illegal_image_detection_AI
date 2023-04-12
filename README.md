@@ -14,8 +14,16 @@
 ### 3. 모델 학습 과정
 - 유해한 이미지 1000여개를 수집하고 어그멘테이션을 통해 데이터 증진시켜 정상적인 이미지와 비율을 맞춤
 - 정상적인 이미지 8000여개를 수집함.
-
-![Group 4893](https://user-images.githubusercontent.com/38881094/231361820-a6ab5f68-fa89-445d-b962-41ddaccf4911.png)
+<center> ![Group 4893](https://user-images.githubusercontent.com/38881094/231361820-a6ab5f68-fa89-445d-b962-41ddaccf4911.png) </center>
 
 ![image](https://user-images.githubusercontent.com/38881094/231362369-d01ce4dc-64c9-4209-9f96-25f6505c7014.png)
 
+
+
+### 4. 결과
+
+<center>
+
+![Group 4895](https://user-images.githubusercontent.com/38881094/231369389-55239545-6b97-4f54-9067-8f15a588f732.png)
+
+</center>
