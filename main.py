@@ -51,7 +51,7 @@ def get_ban_text_list(texts:dict) -> list:
 
 def make_dataset_to_be_detected() -> tuple:
     images, texts, from_minutes_ago = {}, {}, settings.FROM_MINUTES_AGO
-    database_image_tables = settings.DATABASE_IMAGE_TABLES[0:1]
+    database_image_tables = settings.DATABASE_IMAGE_TABLES
     database_text_tables = settings.DATABASE_TEXT_TABLES
     
     for v in database_image_tables:
@@ -68,7 +68,8 @@ def update_database() -> None:
     images, texts = make_dataset_to_be_detected()
     ban_post_list = get_ban_image_list(images) + get_ban_text_list(texts)
 
-    payload = {'list':{'jungmo_photo':[], 'jungmo_post_image':[], 'jungmo_review_images':[], 'my_feed_image':[]}}
+    payload = settings.BASE_PAYLOAD
+
     for v in ban_post_list:
         table, index = v.split('_')
         payload['list'][table].append(int(index))
@@ -84,7 +85,7 @@ if __name__ == '__main__':
         # test_line
         update_database()
     else:
-        schedule.every(10).minutes.do(update_database)
+        schedule.every(settings.SCHEDULE_MINUTE).minutes.do(update_database)
         while True:
             schedule.run_pending()
             time.sleep(1)
