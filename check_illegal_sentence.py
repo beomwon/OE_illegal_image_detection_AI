@@ -20,28 +20,7 @@ def ocr(image_file:str) -> json:
     return response
 
 def count_illegal_word(target_type:str, target) -> int:
-    text = ''
-    if target_type == 'json':
-        for v in target['images'][0]['fields']:
-            text += v['inferText'] + ' '
-    elif target_type == 'text':
-        text = target
-    
-    return sum(map(text.count, settings.ILLEGAL_WORD_SET))
-
-    # OKT 사용 로직
-    # okt = Okt()
-    # for v in okt.pos(text): # URL
-    #     if v[0] in settings.ILLEGAL_WORD_SET:
-    #         count += 1
-            # print(v[0], '검출')
-
-    # for v in okt.pos(text): # URL
-    #     if v[0] in settings.ILLEGAL_WORD_SET or v[1] == 'URL':
-    #         count += 1
-    #         # print(v[0], '검출')
-
-    # return count
+    pass # 보안
 
 def isIllegal(type:str, target:str) -> bool:
     if type == 'image':
