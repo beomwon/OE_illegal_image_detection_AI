@@ -50,7 +50,7 @@ def get_ban_text_list(texts:dict) -> list:
     return table_and_indexs
 
 def make_dataset_to_be_detected() -> tuple:
-    images, texts, from_minutes_ago = {}, {}, settings.FROM_MINUTES_AGO
+    images, texts, from_minutes_ago = {}, {}, settings.SCHEDULE_MINUTE
     database_image_tables = settings.DATABASE_IMAGE_TABLES
     database_text_tables = settings.DATABASE_TEXT_TABLES
     
